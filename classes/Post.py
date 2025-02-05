@@ -20,15 +20,18 @@ class Post:
     def display(self):
 
         font = pygame.font.SysFont('chalkduster' , (UI_FONT_SIZE))
-        text = font.render('eitan romanov', True, (0, 0, 0))
+        text = font.render(self.user_name, True, (0, 0, 0))
         screen.blit(text, (USER_NAME_X_POS, USER_NAME_Y_POS))
 
 
-        text = font.render('Ashdod', True, (0, 0, 0))
+        text = font.render(self.loction, True, (0, 0, 0))
         screen.blit(text, (LOCATION_TEXT_X_POS, LOCATION_TEXT_Y_POS))
 
         text = font.render((f"liked by {self.likes_counters} users"), True, (0, 0, 0))
         screen.blit(text, (LIKE_TEXT_X_POS,LIKE_TEXT_Y_POS))
+
+        text = font.render((self.discription),True ,(0, 0, 0))
+        screen.blit(text, (DESCRIPTION_TEXT_X_POS, DESCRIPTION_TEXT_Y_POS))
 
         pass
 
