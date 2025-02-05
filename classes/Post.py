@@ -8,18 +8,29 @@ class Post:
     """
     A class used to represent post on Nitzagram
     """
-    def __init__(self): #TODO: add parameters
-        #TODO: write me!
+    def __init__(self, user_name, loction, discription):
+        self.user_name = user_name
+        self.loction = loction
+        self.likes_counters = []
+        self.comments = []
+        self.discription = discription
+
         pass
 
     def display(self):
-        """
-        Display the Post image/Text, description, location, likes and comments
-        on screen
 
-        :return: None
-        """
-        # TODO: write me!
+        font = pygame.font.SysFont('chalkduster' , (UI_FONT_SIZE))
+        text = font.render('eitan romanov', True, (0, 0, 0))
+        screen.blit(text, (USER_NAME_X_POS, USER_NAME_Y_POS))
+
+
+        text = font.render('Ashdod', True, (0, 0, 0))
+        screen.blit(text, (LOCATION_TEXT_X_POS, LOCATION_TEXT_Y_POS))
+
+        text = font.render((f"liked by {self.likes_counters} users"), True, (0, 0, 0))
+        screen.blit(text, (LIKE_TEXT_X_POS,LIKE_TEXT_Y_POS))
+
+        
         pass
 
 
