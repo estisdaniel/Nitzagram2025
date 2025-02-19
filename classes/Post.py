@@ -30,7 +30,7 @@ class Post:
         text = font.render((f"liked by {self.likes_counters} users"), True, (0, 0, 0))
         screen.blit(text, (LIKE_TEXT_X_POS,LIKE_TEXT_Y_POS))
 
-        
+
         pass
 
 
