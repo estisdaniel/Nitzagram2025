@@ -11,4 +11,12 @@ class imagepost(Post):
         img= pygame.image.load(image_path)
         img= pygame.transform.scale(img,POST_WIDTH,POST_HEIGHT)
 
-    def display(self,):
+    def display_discription(self,):
+
+    def display_likes(self):
+
+    def display_name(self):
+
+    def display_comments(self):
+
+    def display_text_location(self):
